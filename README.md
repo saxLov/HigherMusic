@@ -31,6 +31,9 @@
 
 三种画廊的静态演示:
 
+<details>
+<summary>📸 三种画廊的静态演示（点击展开）</summary>
+
 <table width="100%" border="0" cellspacing="8" cellpadding="0">
 <tr>
   <td width="31%" align="center">
@@ -50,6 +53,9 @@
   </td>
 </tr>
 </table>
+
+</details>
+
 
 
 书脊景深响应整个播放器内容窗口；设置面板打开时暂停响应。背景选项依次为 **自选、封面雾色、雅黑**。
