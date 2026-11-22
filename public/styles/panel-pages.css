@@ -1,0 +1,39 @@
+/* One continuous smoked-glass surface above the album wall. */
+:root { --glass-ink:#f3efe9; --glass-muted:#c4bec9; --glass-accent:#c7b9cf; }
+#settingsDialog { color:var(--glass-ink); width:min(56vw,1040px); min-width:min(640px,calc(100vw - 36px)); max-height:calc(100dvh - 40px); }
+#settingsDialog .settings-glass { background:linear-gradient(125deg,#c7b9cf26,#25252e66 55%,#c7b6a626); backdrop-filter:blur(30px) saturate(110%); border-color:#f3efe92e; }
+#settingsDialog[data-page]:not([data-page="settingsHome"]) { width:min(860px,calc(100vw - 40px)); }
+#settingsDialog .panel-page { position:relative; inset:auto; margin:0; padding:0; width:auto; max-width:none; min-width:0; max-height:calc(100dvh - 104px); border:0; border-radius:0; background:transparent; color:inherit; box-shadow:none; overflow:auto; scrollbar-gutter:stable; }
+#settingsDialog #settingsHome { overflow:visible; }
+#settingsDialog .panel-page > .panel-backbar { margin-bottom:16px; }
+.panel-backbar button { padding:6px 10px; font-size:12px; background:#ffffff06; border-color:#ffffff16; }
+#settingsDialog .dialog-top { margin-bottom:20px; gap:16px; }
+#settingsDialog .dialog-top h2,#settingsDialog .panel-page > h2 { margin:0; font-size:24px; font-weight:500; }
+#settingsDialog .dialog-top button { width:34px; height:34px; flex-shrink:0; border-radius:50%; padding:0; }
+#settingsDialog .panel-page p,#settingsDialog small { color:var(--glass-muted); line-height:1.7; }
+#settingsDialog .panel-page input:not([type="checkbox"]),#settingsDialog .panel-page select { background:#eee6ef0d; color:var(--glass-ink); border:1px solid #ffffff24; border-radius:12px; padding:11px 14px; box-sizing:border-box; }
+#settingsDialog input::placeholder { color:#c4bec98c; }
+#settingsDialog .panel-page button { border-color:#ffffff20; background:#eee6ef09; border-radius:12px; }
+#settingsDialog .panel-page button:hover { background:#e8deef1a; }
+#settingsDialog :focus-visible { outline:2px solid #c7b9cf; outline-offset:3px; }
+#settingsDialog #playlistFilter { width:100%; }
+#settingsDialog #playlistBrowseList { max-height:48dvh; overflow:auto; padding-right:6px; }
+#settingsDialog #playlistBrowseList > button { width:100%; display:flex; align-items:center; gap:12px; text-align:left; padding:11px 12px; margin-bottom:7px; }
+#settingsDialog #playlistBrowseList > button.preview-selected { background:#c7b9cf24; border-color:#c7b9cf88; }
+#settingsDialog #playlistBrowseList img { width:44px; height:44px; object-fit:cover; border-radius:8px; }
+#settingsDialog #playlistBrowseList span { flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:14px; }
+#settingsDialog #playlistBrowseList small { font-size:11px; flex-shrink:0; }
+#settingsDialog .playlist-pages { display:flex; align-items:center; justify-content:center; gap:18px; margin-top:14px; }
+#settingsDialog .rejected > div,#settingsDialog li { background:#eee6ef08; border-color:#ffffff18; border-radius:12px; }
+#settingsDialog pre { background:transparent; white-space:pre-wrap; overflow-wrap:anywhere; }
+#settingsDialog .qr { background:#fff; padding:14px; border-radius:16px; }
+#settingsDialog #searchResults { max-height:44dvh; }
+.panel-hint { font-size:11px; line-height:1.7; color:var(--glass-muted); margin:12px 0 0; }
+#enterGallery:not(:disabled) { background:#c7b9cf26 !important; border-color:#c7b9cf55 !important; }
+#settingsDialog * { scrollbar-width:thin; scrollbar-color:#c7b9cf66 transparent; }
+@media(max-width:1000px),(max-height:760px) { #settingsDialog { width:min(720px,calc(100vw - 36px));padding:22px; } #settingsDialog .panel-page { max-height:calc(100dvh - 84px); } #settingsDialog #playlistBrowseList { max-height:42dvh; } }
+@media(max-width:620px) { #settingsDialog { min-width:0;width:calc(100vw - 28px); } #settingsDialog #settingsHome { overflow:auto; } #settingsDialog #playlistBrowseList small { display:none; } }
+
+.gallery-source-state { display:block; color:#c7b9cf; font-size:12px; margin-top:8px; }
+
+#settingsDialog #searchResults { height:min(40dvh,400px); }

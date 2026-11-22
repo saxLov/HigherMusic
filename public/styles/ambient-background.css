@@ -1,0 +1,18 @@
+/* 只改变背景层；唱片、歌词和初始页面布局保持原样。 */
+body.ambient-enabled .scene::before { opacity: 0; }
+body.ambient-enabled .backdrop[data-background-kind="scene"],
+body.ambient-enabled .backdrop[data-background-kind="mist"] { filter: brightness(.72); }
+body.ambient-enabled.immersive .backdrop[data-background-kind="scene"],
+body.ambient-enabled.immersive .backdrop[data-background-kind="mist"] { filter: brightness(.95); }
+body.ambient-enabled .backdrop[data-background-kind="scene"] { inset: -24px; filter: brightness(.65) blur(18px); }
+body.ambient-enabled.immersive .backdrop[data-background-kind="scene"] { filter: brightness(.85) blur(18px); }
+@media (prefers-reduced-motion: reduce) {
+  body.ambient-enabled .backdrop { transition: none; }
+}
+
+/* 统一无外圈交互；输入仍可编辑，但无选中蓝色填充。 */
+html body * { -webkit-user-select:none !important; user-select:none !important; }
+html body input, html body textarea, html body [contenteditable="true"] { -webkit-user-select:text !important; user-select:text !important; }
+html body *::selection { background:transparent !important; color:inherit !important; }
+html body *:focus, html body *:focus-visible { outline:none !important; }
+html body button:focus, html body select:focus, html body input:focus { box-shadow:none !important; }

@@ -1,0 +1,72 @@
+body.gallery-spine .rail-viewport,
+body.gallery-spine .record-deck,
+body.gallery-spine .hint { display: none !important; }
+body.gallery-spine .station { inset: 0; width: 100%; height: 100%; pointer-events: none; transform: none; z-index: 1; }
+body.gallery-spine .listening-panel { position: absolute; left: 20%; top: 22px; width: 60%; transform: none; }
+body.gallery-spine #musicSpectrum { display: none !important; }
+body.gallery-spine #lyricCurrent.lyric-welcome { visibility: hidden; }
+body.gallery-spine #spineGallery { position: absolute; inset: 0 4%; overflow: hidden; user-select: none; z-index: 2; }
+.spine-rack { position: absolute; inset: 0; touch-action: none; }
+.spine-rack, .spine-rack *, .spine-rack:active { cursor: default !important; user-select: none; -webkit-user-drag: none; }
+.spine-book {
+  position: absolute; left: 50%; top: 54%; width: min(22%, 43vh); aspect-ratio: 1;
+  height: auto; padding: 0; border: 0; border-radius: 0;
+  background: transparent; box-shadow: none; transform-origin: center;
+  transition: none; overflow: visible; will-change: transform;
+}
+.spine-surface { position: relative; width: 100%; aspect-ratio: 1; transform-origin: center; pointer-events: none; }
+.spine-surface::after { content: ''; position: absolute; right: 0; inset-block: 0; width: 2px; background: linear-gradient(transparent, #faf3d8a3, transparent); }
+.spine-surface img, .seam-face img { display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0; pointer-events: none; }
+.spine-surface img.is-loaded, .seam-face img.is-loaded { opacity: 1; }
+body.gallery-spine:not(.gallery-wall) :is(.spine-surface, .seam-face) {
+  mask-image: linear-gradient(90deg,
+    rgb(0 0 0 / var(--spine-alpha, .02)) 0%,
+    rgb(0 0 0 / calc(var(--spine-alpha, .02) + .06)) 20%,
+    rgb(0 0 0 / calc(var(--spine-alpha, .02) + .25)) 46%,
+    rgb(0 0 0 / .85) 77%, #000 94%);
+}
+.spine-book span {
+  display: block; padding: 8px 0 0 42%; text-align: left; background: transparent;
+  color: #e3e8e5; font-size: 12px; line-height: 1.4; text-shadow: 0 2px 6px #071016;
+  max-height: 44px; overflow: hidden; pointer-events: none;
+}
+.spine-book.picked .spine-surface { mask-image: none !important; }
+.spine-book.picked span { visibility: hidden; }
+.spine-detail { position: absolute; top: calc(54% + min(11vw, 23vh)); left: 20%; width: 60%; text-align: center; z-index: 1001; }
+.spine-detail h2 { font-size: 22px; margin: 0 0 8px; }
+.spine-detail p { margin: 6px; color: #bbb; }
+.spine-detail small { display: block; color: #aaa; }
+.spine-detail > div { display: flex; gap: 12px; justify-content: center; margin-top: 15px; }
+.spine-closing .spine-book:not(.picked) { transform: rotateY(-90deg) !important; opacity: 0 !important; transition: transform 350ms ease-out, opacity 350ms ease-out; }
+body.gallery-wall .spine-book { width: min(20%, 35vh); }
+body.gallery-spine .gallery-navigation { z-index: 4; }
+.gallery-seam { position: absolute; inset: 0; pointer-events: none; perspective: 1200px; }
+.seam-leaf { position: absolute; left: 50%; top: 54%; width: min(22%, 43vh); aspect-ratio: 1; transform-style: preserve-3d; }
+body.gallery-wall .seam-leaf { width: min(20%, 35vh); }
+.seam-face { position: absolute; inset: 0; background: transparent; backface-visibility: hidden; }
+.seam-face.back { transform: rotateY(180deg); }
+.seam-face span { position: absolute; inset: auto 0 0; padding: 8px; background: #080b0ed9; color: #ddd; font-size: 11px; max-height: 54px; overflow: hidden; }
+@media(max-height:720px) {
+  .spine-book, .seam-leaf { top: 50%; width: min(22%, 34vh); }
+  body.gallery-wall .spine-book, body.gallery-wall .seam-leaf { width: min(20%, 30vh); }
+  .spine-detail { top: auto; bottom: 8px; left: 15%; width: 70%; }
+  .spine-detail > div { margin-top: 8px; }
+  .spine-detail p { margin: 4px; }
+  .spine-detail h2 { font-size: 17px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .spine-closing .spine-book { transition: none; }
+}
+/* Cover and title share one plane. Hover translates the complete sleeve. */
+.spine-plane { width:100%; transform-origin:center; pointer-events:auto; }
+.spine-book { pointer-events:none; transition:translate 120ms ease-out; }
+.spine-book:hover, .spine-book:active, .spine-book:focus,
+.spine-book:focus-visible { background:transparent!important; box-shadow:none!important; outline:none!important; border:0!important; }
+.spine-rack.moving .spine-book { transition:none; }
+.spine-book span { padding-left:0; text-align:center; }
+.spine-book:focus-visible .spine-plane { translate:0 -12px; }
+.transition-page, .transition-page * { pointer-events:none!important; }
+.gallery-seam { perspective:none; }
+body.gallery-wall .spine-plane { transform:none!important; }
+#currentSource, #playbackDiagnostics { display:none!important; }
+@media(prefers-reduced-motion:reduce) { .spine-book { transition:none; } }

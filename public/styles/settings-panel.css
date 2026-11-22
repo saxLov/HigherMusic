@@ -1,0 +1,36 @@
+/* Smoked glass above the record sleeve: pearl lettering, soft reflected edges. */
+.quiet-header { justify-content: space-between; }
+#settingsOpen { display:inline-flex; align-items:center; gap:10px; border-radius:24px; padding:10px 20px; background:#ffffff08; }
+#settingsOpen span { font-size:20px; opacity:.7; }
+#settingsDialog { position:fixed; inset:0; margin:auto; width:clamp(640px,56vw,1040px); max-width:calc(100vw - 36px); max-height:calc(100dvh - 48px); padding:30px; border:0; border-radius:30px; color:#f2eee9; background:transparent; overflow:visible; isolation:isolate; box-shadow:none; }
+#settingsDialog::backdrop { background:#09070b20; backdrop-filter:none; }
+.settings-glass { position:absolute; inset:0; z-index:-1; border-radius:inherit; border:1px solid #ffffff35; background:linear-gradient(125deg,#e6ddf126,#9896aa14 50%,#dfc5b31c); backdrop-filter:blur(28px) saturate(125%); box-shadow:inset 0 1px 0 #ffffff22,0 30px 100px #0005; pointer-events:none; }
+.settings-heading { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:24px; gap:20px; }
+.settings-heading h2 { margin:0; font-size:25px; font-weight:500; letter-spacing:.04em; }
+.settings-heading p { color:#ddd4ceaa; font-size:13px; margin:8px 0 0; }
+#settingsClose { flex-shrink:0; width:34px; height:34px; border-radius:50%; padding:0; font-size:24px; border-color:#ffffff18; background:#ffffff08; }
+#settingsGrid { display:grid; grid-template-columns:1.12fr 1fr; gap:12px; }
+.setting-module { min-width:0; padding:18px; border:1px solid #ffffff13; background:#ffffff06; border-radius:18px; }
+.setting-module h3 { font-size:13px; font-weight:500; color:#e0d6c8aa; margin:0 0 14px; }
+.setting-actions { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+#settingsDialog .setting-actions button,#settingsDialog select { font-size:13px; padding:9px 12px; border-radius:12px; border-color:#ffffff18; background:#ffffff09; min-height:36px; }
+#settingsDialog select { width:100%; max-width:100%; margin-bottom:4px; }
+#settingsDialog select option { background:#242329; color:#f2eee9; }
+#settingsAccount { font-size:15px; margin:0 0 12px; }
+.remember-option { display:flex; align-items:center; gap:8px; font-size:13px; margin-top:15px; cursor:pointer; }
+.remember-option input,.history-sync input { accent-color:#c6bacf; width:15px; height:15px; }
+#rememberHint,.login-note { color:#e0d7ce99; font-size:12px; line-height:1.65; margin-bottom:0; }
+#settingsDialog .history-sync { font-size:12px; white-space:normal; margin-top:7px; line-height:1.7; }
+#settingsDialog button:hover { background:#ffffff18; }
+#settingsDialog button:focus-visible { outline:2px solid #d9cddd; outline-offset:2px; }
+#settingsDialog.closing { pointer-events:none; }
+@media(max-width:1000px),(max-height:760px) { #settingsDialog { padding:24px; width:min(720px,calc(100vw - 36px)); } .setting-module { padding:14px; } .settings-heading { margin-bottom:18px; } }
+@media(max-width:620px) { #settingsDialog { padding:20px; overflow:auto; } #settingsGrid { grid-template-columns:1fr; } .settings-heading h2 { font-size:21px; } }
+@media(prefers-reduced-motion:reduce) { #settingsDialog * { animation:none !important; transition:none !important; } }
+
+#settingsGrid { grid-template-columns:repeat(2,minmax(0,1fr)); align-items:stretch; }
+#settingsAtmosphere { align-content:start; }
+#settingsAtmosphere label { flex-basis:100%; margin-top:8px; }
+#settingsDialog .setting-actions { gap:10px; }
+#playlistBrowseList .playlist-track-row:disabled { opacity:1; cursor:default; }
+@media(max-width:620px) { #settingsGrid { grid-template-columns:1fr; } }

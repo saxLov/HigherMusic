@@ -1,0 +1,19 @@
+/* 动效局限于普通画廊；不覆盖唱片、歌词、初始页或沉浸页的样式。 */
+.spine-jump-layer { position:absolute; inset:0; z-index:5; pointer-events:none; transform-style:preserve-3d; }
+.spine-jump-jacket {
+  position:absolute;
+  transform-origin:0 50%;
+  transform-style:preserve-3d;
+  border-left:2px solid #ffffff22;
+  box-shadow:8px 10px 22px #0008;
+  background:#1d1d1d;
+  overflow:hidden;
+  will-change:transform,opacity;
+}
+.spine-jump-jacket img { display:block; width:100%; height:100%; object-fit:cover; }
+.spine-jump-jacket span {
+  position:absolute; bottom:8px; left:7px; padding:4px 6px;
+  background:#0009; color:#eee; font-size:11px; white-space:nowrap;
+}
+.spine-jumping { pointer-events:none; }
+@media (prefers-reduced-motion:reduce) { .spine-jump-layer { display:none; } }
