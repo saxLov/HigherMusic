@@ -1,0 +1,26 @@
+{
+  "name": "higher-music",
+  "version": "7.3.7",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "description": "Higher Music — 失重档案馆风格的酷狗歌单播放器",
+  "author": "Higher Music",
+  "main": "electron/main.mjs",
+  "dependencies": {
+    "music-metadata": "11.16.1",
+    "@neteasecloudmusicapienhanced/api": "4.41.1"
+  },
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "setup:provider": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/setup.ps1",
+    "test": "node --test test/playlist-only.test.mjs test/playback-session.test.mjs test/media-engine.test.mjs test/listening.test.mjs test/api-client.test.mjs test/lyrics.test.mjs test/kugou-playback.test.mjs",
+    "test:legacy": "node --test test/*.test.mjs"
+  },
+  "devDependencies": {
+    "electron": "45.2.3"
+  }
+}
