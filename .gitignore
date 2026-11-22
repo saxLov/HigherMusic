@@ -1,0 +1,21 @@
+node_modules/
+.runtime/
+release-assets/
+win-unpacked/
+dist/
+.env
+.env.*
+!.env.example
+*.log
+*.sqlite*
+*.db*
+*.tmp
+backgrounds*/
+public/Image169/
+settings*.json
+login-*.json
+.DS_Store
+Thumbs.db
+
+# Private publishing guide (local only)
+/tutorial.md
