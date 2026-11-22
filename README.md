@@ -29,7 +29,27 @@
 </tr>
 </table>
 
+三种画廊的静态演示:
 
+<table width="100%" border="0" cellspacing="8" cellpadding="0">
+<tr>
+  <td width="31%" align="center">
+    <img src="docs/images/staticDemo1.png" width="100%">
+    <br>
+    <sub>书脊画廊</sub>
+  </td>
+  <td width="31%" align="center">
+    <img src="docs/images/staticDemo2.png" width="100%">
+    <br>
+    <sub>展墙画廊</sub>
+  </td>
+  <td width="31%" align="center">
+    <img src="docs/images/staticDemo3.png" width="100%">
+    <br>
+    <sub>竖直画廊</sub>
+  </td>
+</tr>
+</table>
 
 
 书脊景深响应整个播放器内容窗口；设置面板打开时暂停响应。背景选项依次为 **自选、封面雾色、雅黑**。
