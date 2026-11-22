@@ -21,11 +21,14 @@
 三个画廊的搜索共用“书脊寻址”动效。书脊与展墙定位后进入抽页预览；竖直画廊保留其原有定位并播放行为。减少动态效果或沉浸状态下使用轻量路径。
 书脊画廊（鼠标跟随视差）,歌曲选中,书脊寻址的演示：
 
-<div style="display:flex;gap:12px;justify-content:center;align-items:center;">
-  <img src="docs/images/dynamic_demo.gif" style="flex:1;width:0;">
-  <img src="docs/images/pick_demo.gif" style="flex:1;width:0;">
-  <img src="docs/images/search_demo.gif" style="flex:1;width:0;">
-</div>
+<table style="border-collapse:collapse;width:100%;">
+<tr>
+<td style="border:none;padding:4px;width:33.33%;"><img src="docs/images/dynamic_demo.gif" style="width:100%;display:block;"></td>
+<td style="border:none;padding:4px;width:33.33%;"><img src="docs/images/pick_demo.gif" style="width:100%;display:block;"></td>
+<td style="border:none;padding:4px;width:33.33%;"><img src="docs/images/search_demo.gif" style="width:100%;display:block;"></td>
+</tr>
+</table>
+
 
 
 
