@@ -19,15 +19,16 @@
 书脊中的封面及标题共享透视，悬停时封套轻轻上浮。点击书脊或展墙中的歌曲，会抽出封套并让两侧展开；核对信息后点击“播放这首”才提交播放。“放回”把封套送回原位置。
 首尾使用带缓冲区的左右滑转场：书脊逐张叠牌，展墙平面接片。轻微反向操作不会立即触发回跳。它们并非始终首尾相连的环形画廊。
 三个画廊的搜索共用“书脊寻址”动效。书脊与展墙定位后进入抽页预览；竖直画廊保留其原有定位并播放行为。减少动态效果或沉浸状态下使用轻量路径。
-书脊画廊（鼠标跟随视差）,歌曲选中,书脊寻址的演示：
 
-<table style="border-collapse:collapse;width:100%;">
-<tr>
-<td style="border:none;padding:4px;width:33.33%;"><img src="docs/images/dynamic_demo.gif" style="width:100%;display:block;"></td>
-<td style="border:none;padding:4px;width:33.33%;"><img src="docs/images/pick_demo.gif" style="width:100%;display:block;"></td>
-<td style="border:none;padding:4px;width:33.33%;"><img src="docs/images/search_demo.gif" style="width:100%;display:block;"></td>
-</tr>
-</table>
+
+### 竖直画廊 Gallery (Vertical）
+https://github.com/user-attachments/assets/a48a01ba-6b85-4ec3-b2b5-6ce7af6c0f1f
+### 展墙画廊 Gallery (Wall)
+https://github.com/user-attachments/assets/7b562c83-0740-452b-a70e-0f0e6e78067b
+### 书脊寻址 Search
+https://github.com/user-attachments/assets/c9f18dc5-094c-4783-b1ea-97a5df9eb67a
+### 书脊画廊 Spine Gallery
+https://github.com/user-attachments/assets/dd0cc0d1-01d3-43a1-9453-601427a41471
 
 三种画廊的静态演示:
 
