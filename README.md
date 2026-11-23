@@ -32,8 +32,7 @@ https://github.com/user-attachments/assets/dd0cc0d1-01d3-43a1-9453-601427a41471
 
 三种画廊的静态演示:
 
-<details>
-<summary>📸 三种画廊的静态演示（点击展开）</summary>
+#### 🖼 三种画廊的静态演示
 
 <table width="100%" border="0" cellspacing="8" cellpadding="0">
 <tr>
@@ -54,8 +53,6 @@ https://github.com/user-attachments/assets/dd0cc0d1-01d3-43a1-9453-601427a41471
   </td>
 </tr>
 </table>
-
-</details>
 
 
 
