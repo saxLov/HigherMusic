@@ -58,14 +58,33 @@ https://github.com/user-attachments/assets/dd0cc0d1-01d3-43a1-9453-601427a41471
 
 书脊景深响应整个播放器内容窗口；设置面板打开时暂停响应。背景选项依次为 **自选、封面雾色、雅黑**。
 
-## 下载与运行
+## 下载与安装
 
-在本仓库的 **Releases** 页面下载 `HigherMusic.v1.0.0-Windows-x64.zip`，完整解压，然后运行 `Higher Music.exe`。
+在 [Releases](https://github.com/saxLov/HigherMusic/releases/latest) 中选择一种：
 
-- 面向 Windows x64；普通用户不需要另行安装 Node.js。
-- 不要只复制 EXE，程序依赖同目录的 DLL、资源及 `resources/`。
-- GitHub 自动生成的 Source code 压缩包不是可运行程序。
-- 关闭旧版后再运行新目录中的程序。本包未提供代码签名或自动更新承诺。
+| 文件 | 说明 |
+| --- | --- |
+| `Higher-Music-Setup-x64.exe` | **推荐**。安装版：自动创建桌面与开始菜单快捷方式，可在「设置 → 应用」中卸载 |
+| `Higher-Music-x64.zip` | 免安装版：完整解压后运行 `Higher Music.exe` |
+
+- 面向 Windows x64，普通用户不需要另行安装 Node.js。
+- 安装版装到当前用户目录，不需要管理员权限。
+- 免安装版不要只复制 EXE，程序依赖同目录的 DLL、资源及 `resources/`；也不要直接在压缩包里双击运行。
+- GitHub 自动生成的 Source code 压缩包是源码，**不是可运行程序**。
+
+> ⚠️ **首次运行提示**
+>
+> 本程序未做代码签名，Windows SmartScreen 可能提示「Windows 已保护你的电脑」。
+> 点「更多信息」→「仍要运行」即可；也可以在 exe 上右键 → 属性 → 勾选「解除锁定」。
+>
+> 完整性校验（完整值见 Release 附件 `SHA256SUMS.txt`）：
+>
+> - Setup：`98acb34bc1dff4eb30d2c399cf3075210564881a8db8c710489b42746b749716`
+> - zip：`e88ceef98b6cf5f3bd6fe6a4cb65d38ec8c9a5dbe977916e822531c20418b51b`
+>
+> 可在 PowerShell 中执行 `Get-FileHash .\Higher-Music-Setup-x64.exe` 自行比对。
+
+
 
 ## 第一次使用
 
