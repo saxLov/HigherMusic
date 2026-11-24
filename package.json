@@ -1,6 +1,6 @@
 {
   "name": "higher-music",
-  "version": "7.3.7",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -13,14 +13,87 @@
     "music-metadata": "11.16.1",
     "@neteasecloudmusicapienhanced/api": "4.41.1"
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "start": "electron .",
     "setup:provider": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/setup.ps1",
     "test": "node --test test/playlist-only.test.mjs test/playback-session.test.mjs test/media-engine.test.mjs test/listening.test.mjs test/api-client.test.mjs test/lyrics.test.mjs test/kugou-playback.test.mjs",
-    "test:legacy": "node --test test/*.test.mjs"
+    "test:legacy": "node --test test/*.test.mjs",
+    "dist": "electron-builder --win nsis zip"
   },
   "devDependencies": {
-    "electron": "45.2.3"
+    "electron": "45.2.3",
+    "electron-builder": "26.18.0"
+  },
+  "build": {
+    "appId": "com.saxlov.highermusic",
+    "productName": "Higher Music",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "electron/**/*",
+      "lib/**/*",
+      "public/**/*",
+      "!public/Image169/**/*",
+      "server.mjs",
+      "package.json",
+      "README.md",
+      "THIRD_PARTY_NOTICES.md",
+      "LICENSE"
+    ],
+    "extraResources": [
+      {
+        "from": ".runtime/source/KuGouMusicApi-main",
+        "to": "provider",
+        "filter": [
+          "**/*",
+          "!docs/**/*",
+          "!.github/**/*",
+          "!public/**/*",
+          "!.env*",
+          "!*.log",
+          "!CLAUDE.md"
+        ]
+      },
+      {
+        "from": ".runtime/source/KuGouMusicApi-main/node_modules",
+        "to": "provider/node_modules",
+        "filter": [
+          "**/*",
+          "!**/*.log"
+        ]
+      }
+    ],
+    "asar": true,
+    "npmRebuild": false,
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "Higher-Music-${arch}.${ext}",
+      "icon": "build/icon.ico",
+      "signExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Higher Music",
+      "artifactName": "Higher-Music-Setup-${arch}.${ext}"
+    }
   }
 }
